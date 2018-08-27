@@ -1,0 +1,23 @@
+<apex:page controller="XMLReaderController">
+  <apex:form >
+  Add XML file:
+  <apex:inputFile value="{!xmlFileBody1}" accept="xml" contentType="text/xml" />
+  <br/>
+  <br/>
+  Add XML file:
+  <apex:inputFile value="{!xmlFileBody2}" accept="xml" contentType="text/xml" />
+  <br/>
+  <apex:pageMessages ></apex:pageMessages>
+  <br/>
+  <apex:commandButton value="Process" action="{!readFromFile}"/>
+  <br/>
+  
+   Copy consolidated Package from below:
+      <br/>
+  <apex:inputTextarea rows="10" cols="50" value="{!resString}"></apex:inputTextarea> 
+      <br/>  
+      or
+      <br/>  
+    <apex:commandButton value="Download xml" action="{!downloadXML}"/>
+  </apex:form>
+</apex:page>
